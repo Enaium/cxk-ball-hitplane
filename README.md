@@ -15,4 +15,4 @@
 
 <image src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/3.jpg">
 
-<a href="https://github.com/lenyueocy/hitplane">原作</a>
+<a href="https://github.com/lenyueocy/hitplane">原作-@lenyueocy</a>
