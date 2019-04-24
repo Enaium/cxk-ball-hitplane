@@ -1,7 +1,7 @@
 # cxk-ball-hitplane
 微信蔡徐坤篮球打飞机
 
-电脑打开 响应式设计模式 使用
+电脑打开 响应式设计模式<image src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/4.jpg"> 使用
 
 <a href="https://lightcolour-666.github.io/cxk-ball-hitplane/">点我游玩</a>
 
