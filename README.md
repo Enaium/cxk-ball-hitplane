@@ -3,6 +3,8 @@
 
 电脑打开 响应式设计模式 使用
 
+<a href="https://lightcolour-666.github.io/cxk-ball-hitplane/">点我游玩</a>
+
 主页
 
 <image src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/1.jpg">
