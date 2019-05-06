@@ -17,7 +17,7 @@ var scores=0;
     //杀死敌方音效
 var kill=document.getElementById("sound-kill");
     //游戏结束
-var gameover=document.getElementById("gameover");
+var gameover=document.getElementById("sound-gameover");
 
 
 /*
@@ -362,6 +362,7 @@ function start(){
                   if(enemys[j].imagenode.offsetTop+enemys[j].plansizeY>=selfplan.imagenode.offsetTop+40&&enemys[j].imagenode.offsetTop<=selfplan.imagenode.offsetTop-20+selfplan.plansizeY){
                       //碰撞本方飞机，游戏结束，统计分数
                       selfplan.imagenode.src="image/本方飞机爆炸.gif";
+                      this.gameover.play();
                       enddiv.style.display="block";
                       planscore.innerHTML=scores;
                       if(document.removeEventListener){
@@ -372,7 +373,7 @@ function start(){
                           mainDiv.detachEvent("ontouchstart",yidong);
                           bodyobj.removeEventListener("touchstart",bianjie,true);
                       }
-                      this.gameover.play();
+                      
                       clearInterval(set);
                   }
                 }
