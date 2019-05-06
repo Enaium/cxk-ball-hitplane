@@ -14,6 +14,11 @@ var enddiv=document.getElementById("enddiv");
 var planscore=document.getElementById("planscore");
     //初始化分数
 var scores=0;
+    //杀死敌方音效
+var kill=document.getElementById("sound-kill");
+    //游戏结束
+var gameover=document.getElementById("gameover");
+
 
 /*
  创建飞机类
@@ -279,10 +284,12 @@ function start(){
         mark1++;
         //中飞机
         if(mark1%5==0){
+            this.kill.play();
             enemys.push(new enemy(6,25,274,46,60,5000,360,random(1,3),"image/中飞机爆炸.gif","image/enemy3_fly_1.png"));
         }
         //大飞机
         if(mark1==20){
+            this.kill.play();
             enemys.push(new enemy(12,57,210,110,164,30000,540,1,"image/大飞机爆炸.gif","image/enemy2_fly_1.png"));
             mark1=0;
         }
@@ -333,6 +340,7 @@ function start(){
     var bulletslen=bullets.length;
     for(var i=0;i<bulletslen;i++){
         bullets[i].bulletmove();
+        // soundhit.play();
 /*
 如果子弹超出边界,删除子弹
 */
@@ -364,6 +372,7 @@ function start(){
                           mainDiv.detachEvent("ontouchstart",yidong);
                           bodyobj.removeEventListener("touchstart",bianjie,true);
                       }
+                      this.gameover.play();
                       clearInterval(set);
                   }
                 }
