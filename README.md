@@ -8,7 +8,7 @@
 -5/4 更新蔡徐坤贴图为动态
 
 -5/6 增加音效
-     增加PC浏览检测
+   --增加PC浏览检测
 
 ## 说明
 <a href="https://lightcolour-666.github.io/cxk-ball-hitplane/">点我游玩</a>
