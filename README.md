@@ -3,10 +3,13 @@
 
 电脑打开 响应式设计模式<image src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/4.jpg"> 使用
   
+## 更新记录
 
 5/4 更新蔡徐坤贴图为动态
 
+5/6 增加音效
 
+## 说明
 <a href="https://lightcolour-666.github.io/cxk-ball-hitplane/">点我游玩</a>
 
 主页
