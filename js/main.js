@@ -283,13 +283,11 @@ function start(){
     if(mark==20){
         mark1++;
         //中飞机
-        if(mark1%5==0){
-            this.kill.play();
+        if(mark1%5==0){         
             enemys.push(new enemy(6,25,274,46,60,5000,360,random(1,3),"image/中飞机爆炸.gif","image/enemy3_fly_1.png"));
         }
         //大飞机
         if(mark1==20){
-            this.kill.play();
             enemys.push(new enemy(12,57,210,110,164,30000,540,1,"image/大飞机爆炸.gif","image/enemy2_fly_1.png"));
             mark1=0;
         }
@@ -384,6 +382,7 @@ function start(){
                         enemys[j].planhp=enemys[j].planhp-bullets[k].bulletattach;
                         //敌机血量为0，敌机图片换为爆炸图片，死亡标记为true，计分
                         if(enemys[j].planhp==0){
+                            this.kill.play();
                             scores=scores+enemys[j].planscore;
                             scorelabel.innerHTML=scores;
                             enemys[j].imagenode.src=enemys[j].planboomimage;
