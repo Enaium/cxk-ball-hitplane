@@ -16,7 +16,7 @@ var planscore=document.getElementById("planscore");
 var scores=0;
     //杀死敌方音效
 var kill=document.getElementById("sound-kill");
-    //游戏结束
+    //游戏结束音效
 var gameover=document.getElementById("sound-gameover");
 
     //检测是否为PC浏览
@@ -142,7 +142,7 @@ function ourplan(X,Y){
  */
 var dW=$('body').width();;
 var dH = $('body').height();
-var selfplan=new ourplan(dW/2-33,dH*0.75);
+var selfplan=new ourplan(120,458);
 //移动事件
 var ourPlan=document.getElementById('ourplan');
 var yidong=function(){
@@ -211,9 +211,15 @@ var zanting=function(){
 }
 //判断本方飞机是否移出边界,如果移出边界,则取消mousemove事件,反之加上mousemove事件
 var bianjie=function(){
-    var oevent=window.event||arguments[0];
+    var oevent=window.event //鼠标位置
+    ||arguments[0];
     var bodyobjX=oevent.clientX;
     var bodyobjY=oevent.clientY;
+
+
+
+    
+  
     if(bodyobjX<0||bodyobjX>dW||bodyobjY<0||bodyobjY>dH){
         if(document.removeEventListener){
             mainDiv.removeEventListener("touchstart",yidong,true);
@@ -247,7 +253,7 @@ if(document.addEventListener){
     bodyobj.addEventListener("touchstart",bianjie,true);
     //为暂停界面的继续按钮添加暂停事件
     suspenddiv.getElementsByTagName("button")[0].addEventListener("click",zanting,true);
-//    suspenddiv.getElementsByTagName("button")[1].addEventListener("click",chongxinkaishi,true);
+    //    suspenddiv.getElementsByTagName("button")[1].addEventListener("click",chongxinkaishi,true);
     //为暂停界面的返回主页按钮添加事件
     suspenddiv.getElementsByTagName("button")[2].addEventListener("click",jixu,true);
 }
@@ -297,16 +303,16 @@ function start(){
         mark1++;
         //中飞机
         if(mark1%5==0){         
-            enemys.push(new enemy(6,25,274,46,60,5000,360,random(1,3),"image/中飞机爆炸.gif","image/enemy3_fly_1.png"));
+            enemys.push(new enemy(6,25,window.innerWidth-25,46,60,5000,360,random(1,3),"image/中飞机爆炸.gif","image/enemy3_fly_1.png"));
         }
         //大飞机
         if(mark1==20){
-            enemys.push(new enemy(12,57,210,110,164,30000,540,1,"image/大飞机爆炸.gif","image/enemy2_fly_1.png"));
+            enemys.push(new enemy(12,57,window.innerWidth-57,110,164,30000,540,1,"image/大飞机爆炸.gif","image/enemy2_fly_1.png"));
             mark1=0;
         }
         //小飞机
         else{
-            enemys.push(new enemy(1,19,286,34,24,1000,360,random(1,4),"image/小飞机爆炸.gif","image/enemy1_fly_1.png"));
+            enemys.push(new enemy(1,19,window.innerWidth-19,34,24,1000,360,random(1,4),"image/小飞机爆炸.gif","image/enemy1_fly_1.png"));
         }
         mark=0;
     }
