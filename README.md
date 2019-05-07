@@ -23,7 +23,7 @@
 
 主页
 
-<img src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/1.jpg">
+<img src="https://raw.githubusercontent.com/Lightcolour-666/cxk-ball-hitplane/master/md/1.png">
   
 开始
 
