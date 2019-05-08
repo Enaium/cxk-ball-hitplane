@@ -357,7 +357,6 @@ function start(){
     var bulletslen=bullets.length;
     for(var i=0;i<bulletslen;i++){
         bullets[i].bulletmove();
-        // soundhit.play();
 /*
 如果子弹超出边界,删除子弹
 */
@@ -379,7 +378,11 @@ function start(){
                   if(enemys[j].imagenode.offsetTop+enemys[j].plansizeY>=selfplan.imagenode.offsetTop+40&&enemys[j].imagenode.offsetTop<=selfplan.imagenode.offsetTop-20+selfplan.plansizeY){
                       //碰撞本方飞机，游戏结束，统计分数
                       selfplan.imagenode.src="image/本方飞机爆炸.gif";
-                      this.gameover.play();
+
+                      document.addEventListener('touchstart', function() {
+                        document.getElementById('sound-gameover').play()
+                    })
+
                       enddiv.style.display="block";
                       planscore.innerHTML=scores;
                       if(document.removeEventListener){
