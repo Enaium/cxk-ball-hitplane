@@ -379,7 +379,7 @@ function start(){
                       //碰撞本方飞机，游戏结束，统计分数
                       selfplan.imagenode.src="image/本方飞机爆炸.gif";
 
-                      this.gameover.get(0).play();
+                      this.gameover.play();
 
                       enddiv.style.display="block";
                       planscore.innerHTML=scores;
