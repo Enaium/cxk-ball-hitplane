@@ -17,7 +17,7 @@
 
 
 ## 说明
-<a href="https://Enaium.github.io/cxk-ball-hitplane/">点我游玩</a>
+<a href="https://enaium-archive.github.io/cxk-ball-hitplane/">点我游玩</a>
 
 主页
 
